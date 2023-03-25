@@ -1,8 +1,12 @@
-public class GeneralTariff implements Tariff {
+public class GeneralTariff extends Tariff {
 
     private final int MINUTES_AVAILABLE = 100;
     private final double OVERHEAD_COST = 1.5;
     private final double INITIAL_COST = 0.5;
+
+    public GeneralTariff() {
+        super("11");
+    }
 
     @Override
     public double call(int minutesAlreadyDone, int duration) {
